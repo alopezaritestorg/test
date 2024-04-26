@@ -1,0 +1,15 @@
+name: Log Perl Version
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check-perl-version:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Log Perl version
+        run: perl -v
